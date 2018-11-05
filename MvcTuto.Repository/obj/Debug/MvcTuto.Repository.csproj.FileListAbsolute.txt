@@ -1,0 +1,12 @@
+E:\Practice\mvc tutorial\basic\MvcTuto.Repository\bin\Debug\MvcTuto.Repository.dll.config
+E:\Practice\mvc tutorial\basic\MvcTuto.Repository\bin\Debug\MvcTuto.Repository.dll
+E:\Practice\mvc tutorial\basic\MvcTuto.Repository\bin\Debug\MvcTuto.Repository.pdb
+E:\Practice\mvc tutorial\basic\MvcTuto.Repository\bin\Debug\EntityFramework.dll
+E:\Practice\mvc tutorial\basic\MvcTuto.Repository\bin\Debug\EntityFramework.SqlServer.dll
+E:\Practice\mvc tutorial\basic\MvcTuto.Repository\bin\Debug\EntityFramework.xml
+E:\Practice\mvc tutorial\basic\MvcTuto.Repository\bin\Debug\EntityFramework.SqlServer.xml
+E:\Practice\mvc tutorial\basic\MvcTuto.Repository\obj\Debug\MvcTuto.Repository.csprojAssemblyReference.cache
+E:\Practice\mvc tutorial\basic\MvcTuto.Repository\obj\Debug\MvcTuto.Repository.csproj.CoreCompileInputs.cache
+E:\Practice\mvc tutorial\basic\MvcTuto.Repository\obj\Debug\MvcTuto.Repository.csproj.CopyComplete
+E:\Practice\mvc tutorial\basic\MvcTuto.Repository\obj\Debug\MvcTuto.Repository.dll
+E:\Practice\mvc tutorial\basic\MvcTuto.Repository\obj\Debug\MvcTuto.Repository.pdb

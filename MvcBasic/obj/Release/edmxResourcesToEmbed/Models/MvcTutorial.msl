@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MvcTutorialModelStoreContainer" CdmEntityContainer="MvcTutorialEntities">
+    <EntitySetMapping Name="tblDepartments">
+      <EntityTypeMapping TypeName="MvcTutorialModel.tblDepartment">
+        <MappingFragment StoreEntitySet="tblDepartment">
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblEmployees">
+      <EntityTypeMapping TypeName="MvcTutorialModel.tblEmployee">
+        <MappingFragment StoreEntitySet="tblEmployee">
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

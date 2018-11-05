@@ -1,0 +1,16 @@
+﻿@model IEnumerable<MvcBasic.Models.EmployeeViewModel>
+
+@if (Model != null)
+{
+    foreach (var item in Model)
+    {
+        <tr>
+
+            <td>@item.Name</td>
+            <td>@item.DepartmentName</td>
+            <td>@item.Address</td>
+            <td><a href="#"><i class="glyphicon glyphicon-eye-open"></i></a></td>
+
+        </tr>
+    }
+}

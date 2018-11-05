@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MvcTutorialModelStoreContainer" CdmEntityContainer="MvcTutorialEntitiesContainer">
+    <EntitySetMapping Name="Countries">
+      <EntityTypeMapping TypeName="MvcTutorialModel.Country">
+        <MappingFragment StoreEntitySet="Country">
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ImageStores">
+      <EntityTypeMapping TypeName="MvcTutorialModel.ImageStore">
+        <MappingFragment StoreEntitySet="ImageStore">
+          <ScalarProperty Name="ImageId" ColumnName="ImageId" />
+          <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+          <ScalarProperty Name="ImageByte" ColumnName="ImageByte" />
+          <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="MvcTutorialModel.Product">
+        <MappingFragment StoreEntitySet="Product">
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="ImageId" ColumnName="ImageId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="States">
+      <EntityTypeMapping TypeName="MvcTutorialModel.State">
+        <MappingFragment StoreEntitySet="State">
+          <ScalarProperty Name="StateId" ColumnName="StateId" />
+          <ScalarProperty Name="StateName" ColumnName="StateName" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblDepartments">
+      <EntityTypeMapping TypeName="MvcTutorialModel.tblDepartment">
+        <MappingFragment StoreEntitySet="tblDepartment">
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblEmployees">
+      <EntityTypeMapping TypeName="MvcTutorialModel.tblEmployee">
+        <MappingFragment StoreEntitySet="tblEmployee">
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSites">
+      <EntityTypeMapping TypeName="MvcTutorialModel.tblSite">
+        <MappingFragment StoreEntitySet="tblSite">
+          <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+          <ScalarProperty Name="SiteName" ColumnName="SiteName" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSiteUsers">
+      <EntityTypeMapping TypeName="MvcTutorialModel.tblSiteUser">
+        <MappingFragment StoreEntitySet="tblSiteUser">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblUserRoles">
+      <EntityTypeMapping TypeName="MvcTutorialModel.tblUserRole">
+        <MappingFragment StoreEntitySet="tblUserRole">
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

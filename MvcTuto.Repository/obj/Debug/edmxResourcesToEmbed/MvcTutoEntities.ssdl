@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MvcTutorialModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="CountryId" />
+    </Key>
+    <Property Name="CountryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CountryName" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="ImageStore">
+    <Key>
+      <PropertyRef Name="ImageId" />
+    </Key>
+    <Property Name="ImageId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ImageName" Type="nvarchar" MaxLength="1000" />
+    <Property Name="ImageByte" Type="image" />
+    <Property Name="ImagePath" Type="nvarchar" MaxLength="1000" />
+    <Property Name="IsDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ProductId" />
+    </Key>
+    <Property Name="ProductId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="200" />
+    <Property Name="Description" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Price" Type="int" />
+    <Property Name="ImageId" Type="int" />
+  </EntityType>
+  <EntityType Name="State">
+    <Key>
+      <PropertyRef Name="StateId" />
+    </Key>
+    <Property Name="StateId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StateName" Type="varchar" MaxLength="100" />
+    <Property Name="CountryId" Type="int" />
+  </EntityType>
+  <EntityType Name="tblDepartment">
+    <Key>
+      <PropertyRef Name="DepartmentId" />
+    </Key>
+    <Property Name="DepartmentId" Type="int" Nullable="false" />
+    <Property Name="DepartmentName" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="tblEmployee">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+    </Key>
+    <Property Name="EmployeeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Address" Type="varchar" MaxLength="50" />
+    <Property Name="DepartmentId" Type="int" />
+    <Property Name="isDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblSite">
+    <Key>
+      <PropertyRef Name="SiteID" />
+    </Key>
+    <Property Name="SiteID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SiteName" Type="varchar" MaxLength="50" />
+    <Property Name="EmployeeID" Type="int" />
+  </EntityType>
+  <EntityType Name="tblSiteUser">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="EmailId" Type="nvarchar" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar" MaxLength="50" />
+    <Property Name="RoleId" Type="int" />
+  </EntityType>
+  <EntityType Name="tblUserRole">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="RoleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RoleName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="fk_DepartmentId">
+    <End Role="tblDepartment" Type="Self.tblDepartment" Multiplicity="0..1" />
+    <End Role="tblEmployee" Type="Self.tblEmployee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblDepartment">
+        <PropertyRef Name="DepartmentId" />
+      </Principal>
+      <Dependent Role="tblEmployee">
+        <PropertyRef Name="DepartmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_ImageStore">
+    <End Role="ImageStore" Type="Self.ImageStore" Multiplicity="0..1" />
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ImageStore">
+        <PropertyRef Name="ImageId" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="ImageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_RoleId">
+    <End Role="tblUserRole" Type="Self.tblUserRole" Multiplicity="0..1" />
+    <End Role="tblSiteUser" Type="Self.tblSiteUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblUserRole">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="tblSiteUser">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_State_Country">
+    <End Role="Country" Type="Self.Country" Multiplicity="0..1" />
+    <End Role="State" Type="Self.State" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="CountryId" />
+      </Principal>
+      <Dependent Role="State">
+        <PropertyRef Name="CountryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblSite_tblEmployee">
+    <End Role="tblEmployee" Type="Self.tblEmployee" Multiplicity="0..1" />
+    <End Role="tblSite" Type="Self.tblSite" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblEmployee">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="tblSite">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="MvcTutorialModelStoreContainer">
+    <EntitySet Name="Country" EntityType="Self.Country" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ImageStore" EntityType="Self.ImageStore" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="State" EntityType="Self.State" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblDepartment" EntityType="Self.tblDepartment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblEmployee" EntityType="Self.tblEmployee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblSite" EntityType="Self.tblSite" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblSiteUser" EntityType="Self.tblSiteUser" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblUserRole" EntityType="Self.tblUserRole" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="fk_DepartmentId" Association="Self.fk_DepartmentId">
+      <End Role="tblDepartment" EntitySet="tblDepartment" />
+      <End Role="tblEmployee" EntitySet="tblEmployee" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_ImageStore" Association="Self.FK_Product_ImageStore">
+      <End Role="ImageStore" EntitySet="ImageStore" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
+    <AssociationSet Name="fk_RoleId" Association="Self.fk_RoleId">
+      <End Role="tblUserRole" EntitySet="tblUserRole" />
+      <End Role="tblSiteUser" EntitySet="tblSiteUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK_State_Country" Association="Self.FK_State_Country">
+      <End Role="Country" EntitySet="Country" />
+      <End Role="State" EntitySet="State" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblSite_tblEmployee" Association="Self.FK_tblSite_tblEmployee">
+      <End Role="tblEmployee" EntitySet="tblEmployee" />
+      <End Role="tblSite" EntitySet="tblSite" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

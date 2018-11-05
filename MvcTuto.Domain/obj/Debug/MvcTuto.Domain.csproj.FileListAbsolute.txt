@@ -1,0 +1,11 @@
+E:\Practice\mvc tutorial\basic\MvcTuto.Domain\bin\Debug\MvcTuto.Domain.dll
+E:\Practice\mvc tutorial\basic\MvcTuto.Domain\bin\Debug\MvcTuto.Domain.pdb
+E:\Practice\mvc tutorial\basic\MvcTuto.Domain\bin\Debug\AutoMapper.dll
+E:\Practice\mvc tutorial\basic\MvcTuto.Domain\bin\Debug\System.ValueTuple.dll
+E:\Practice\mvc tutorial\basic\MvcTuto.Domain\bin\Debug\AutoMapper.pdb
+E:\Practice\mvc tutorial\basic\MvcTuto.Domain\bin\Debug\AutoMapper.xml
+E:\Practice\mvc tutorial\basic\MvcTuto.Domain\bin\Debug\System.ValueTuple.xml
+E:\Practice\mvc tutorial\basic\MvcTuto.Domain\obj\Debug\MvcTuto.Domain.csproj.CoreCompileInputs.cache
+E:\Practice\mvc tutorial\basic\MvcTuto.Domain\obj\Debug\MvcTuto.Domain.csproj.CopyComplete
+E:\Practice\mvc tutorial\basic\MvcTuto.Domain\obj\Debug\MvcTuto.Domain.dll
+E:\Practice\mvc tutorial\basic\MvcTuto.Domain\obj\Debug\MvcTuto.Domain.pdb

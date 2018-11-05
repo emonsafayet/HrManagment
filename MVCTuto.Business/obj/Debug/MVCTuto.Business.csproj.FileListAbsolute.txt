@@ -1,0 +1,17 @@
+E:\Practice\mvc tutorial\basic\MVCTuto.Business\bin\Debug\MVCTuto.Business.dll.config
+E:\Practice\mvc tutorial\basic\MVCTuto.Business\bin\Debug\MVCTuto.Business.dll
+E:\Practice\mvc tutorial\basic\MVCTuto.Business\bin\Debug\MVCTuto.Business.pdb
+E:\Practice\mvc tutorial\basic\MVCTuto.Business\bin\Debug\EntityFramework.dll
+E:\Practice\mvc tutorial\basic\MVCTuto.Business\bin\Debug\EntityFramework.SqlServer.dll
+E:\Practice\mvc tutorial\basic\MVCTuto.Business\bin\Debug\MvcTuto.Domain.dll
+E:\Practice\mvc tutorial\basic\MVCTuto.Business\bin\Debug\MvcTuto.Repository.dll
+E:\Practice\mvc tutorial\basic\MVCTuto.Business\bin\Debug\MvcTuto.Domain.pdb
+E:\Practice\mvc tutorial\basic\MVCTuto.Business\bin\Debug\MvcTuto.Repository.pdb
+E:\Practice\mvc tutorial\basic\MVCTuto.Business\bin\Debug\MvcTuto.Repository.dll.config
+E:\Practice\mvc tutorial\basic\MVCTuto.Business\bin\Debug\EntityFramework.xml
+E:\Practice\mvc tutorial\basic\MVCTuto.Business\bin\Debug\EntityFramework.SqlServer.xml
+E:\Practice\mvc tutorial\basic\MVCTuto.Business\obj\Debug\MVCTuto.Business.csprojAssemblyReference.cache
+E:\Practice\mvc tutorial\basic\MVCTuto.Business\obj\Debug\MVCTuto.Business.csproj.CoreCompileInputs.cache
+E:\Practice\mvc tutorial\basic\MVCTuto.Business\obj\Debug\MVCTuto.Business.csproj.CopyComplete
+E:\Practice\mvc tutorial\basic\MVCTuto.Business\obj\Debug\MVCTuto.Business.dll
+E:\Practice\mvc tutorial\basic\MVCTuto.Business\obj\Debug\MVCTuto.Business.pdb
